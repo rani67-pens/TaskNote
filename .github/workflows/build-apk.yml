@@ -11,7 +11,7 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -26,7 +26,7 @@ jobs:
         run: flutter build apk --release
         
       - name: Upload APK
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # ✅ UPGRADE KE V4
         with:
           name: tasknote-apk
           path: build/app/outputs/flutter-apk/app-release.apk
