@@ -16,7 +16,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.16.0'
+          flutter-version: '3.19.0'
           channel: 'stable'
       
       - name: Install dependencies
@@ -26,7 +26,7 @@ jobs:
         run: flutter build apk --release
         
       - name: Upload APK
-        uses: actions/upload-artifact@v4  # ✅ UPGRADE KE V4
+        uses: actions/upload-artifact@v4
         with:
           name: tasknote-apk
           path: build/app/outputs/flutter-apk/app-release.apk
